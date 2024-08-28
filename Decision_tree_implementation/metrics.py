@@ -13,6 +13,7 @@ def accuracy(y_hat: pd.Series, y: pd.Series) -> float:
     Students are required to add appropriate assert checks at places to
     ensure that the function does not fail in corner cases.
     """
+    print(y_hat.size, y.size)
     assert y_hat.size == y.size
     # TODO: Write here
     
@@ -56,6 +57,7 @@ def rmse(y_hat: pd.Series, y: pd.Series) -> float:
     Function to calculate the root-mean-squared-error(rmse)
     """
     mse = np.sqrt(np.sum((y-y_hat)**2))
+    return mse
 
 
 def mae(y_hat: pd.Series, y: pd.Series) -> float:
